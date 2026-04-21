@@ -1,0 +1,539 @@
+/* Article Layout */
+
+.article-page {
+  max-width: var(--page-max-width);
+  padding: 10rem var(--page-padding);
+  margin: 0 auto;
+}
+
+.article-page--empty {
+  min-height: calc(100vh - 9rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.article-page--empty h1 {
+  color: var(--off-white-500);
+}
+
+.article-page--empty a {
+  color: var(--green-500);
+}
+
+.article-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-bottom: 6rem;
+  color: var(--off-white-700);
+  font-size: var(--body-xl);
+}
+
+.article-back-link i {
+  font-size: 2rem;
+}
+
+.article-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3rem;
+  margin-bottom: 5rem;
+}
+
+.article-header h1 {
+  color: var(--off-white-500);
+  font-size: clamp(3rem, 5vw, 5.25rem);
+}
+
+.article-hero-image {
+  width: 100%;
+  height: 560px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+/* Article Quote */
+
+.quote {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.25rem;
+  padding: 6rem 2rem 6.5rem;
+  text-align: center;
+  background-color: var(--black-500);
+}
+
+.quote h3 {
+  color: var(--off-white-500);
+}
+
+/* Article Steps */
+
+.image-size-section,
+.colour-usage-section,
+.font-usage-section,
+.green-hosting-section,
+.animation-usage-section {
+  position: relative;
+  padding: var(--article-step-padding);
+}
+
+.image-size-section,
+.colour-usage-section,
+.green-hosting-section,
+.animation-usage-section {
+  display: grid;
+  gap: var(--article-step-gap);
+}
+
+.quote::after,
+.colour-usage-section::before,
+.font-usage-section::before,
+.green-hosting-section::before,
+.animation-usage-section::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(243, 236, 231, 0.18),
+    transparent
+  );
+}
+
+.quote::after {
+  bottom: 0;
+}
+
+.colour-usage-section::before,
+.font-usage-section::before,
+.green-hosting-section::before,
+.animation-usage-section::before {
+  top: 0;
+}
+
+.article-step-heading {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.article-step-heading h2 {
+  color: var(--off-white-500);
+  font-size: clamp(2.4rem, 4vw, 4rem);
+}
+
+.article-step-number {
+  color: var(--green-500);
+  font-family: "Nunito", Helvetica, Arial, sans-serif;
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 700;
+  line-height: 0.9;
+}
+
+.image-size-intro,
+.colour-usage-content,
+.font-usage-section,
+.green-hosting-content,
+.animation-usage-content {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 5rem;
+}
+
+.image-size-intro,
+.colour-usage-content,
+.green-hosting-content,
+.animation-usage-content,
+.font-usage-section {
+  align-items: center;
+}
+
+.image-size-copy,
+.colour-usage-copy,
+.font-usage-copy,
+.green-hosting-copy,
+.animation-usage-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.image-size-copy p,
+.colour-usage-copy p,
+.font-usage-copy p,
+.green-hosting-copy p,
+.animation-usage-copy p {
+  color: var(--off-white-700);
+}
+
+/* Article Step 01: Image Size */
+
+.image-format-weight {
+  width: 100%;
+  max-height: 520px;
+  display: block;
+  object-fit: contain;
+}
+
+.image-comparison {
+  --comparison-position: 50%;
+  position: relative;
+  overflow: hidden;
+  min-height: 640px;
+  border: 1px solid rgba(243, 236, 231, 0.34);
+  background-color: var(--black-700);
+}
+
+.comparison-image {
+  width: 100%;
+  height: 640px;
+  display: block;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.comparison-image--original {
+  position: absolute;
+  inset: 0;
+  clip-path: inset(0 50% 0 0);
+}
+
+.comparison-label {
+  position: absolute;
+  top: 2.25rem;
+  z-index: 2;
+  padding: 0.7rem 0.9rem;
+  background-color: rgba(7, 8, 7, 0.5);
+  color: var(--off-white-500);
+  font-family: "Nunito", Helvetica, Arial, sans-serif;
+  font-size: var(--body-lg);
+  letter-spacing: 0.08em;
+}
+
+.comparison-label--left {
+  left: 2.25rem;
+}
+
+.comparison-label--right {
+  right: 2.25rem;
+}
+
+.comparison-divider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  z-index: 3;
+  width: 3px;
+  background-color: var(--off-white-500);
+  transform: translateX(-50%);
+}
+
+.comparison-handle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 4;
+  width: 3.4rem;
+  height: 3.4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding: 0;
+  border-radius: 999px;
+  background-color: var(--off-white-500);
+  color: var(--black-500);
+  transform: translate(-50%, -50%);
+}
+
+.comparison-handle i {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.compression-stat {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  overflow: hidden;
+  border-radius: 999px;
+  background-color: var(--off-white-500);
+  color: var(--black-500);
+  font-family: "Nunito", Helvetica, Arial, sans-serif;
+  font-size: var(--body-lg);
+  font-weight: 700;
+}
+
+.compression-stat span {
+  display: flex;
+  align-items: center;
+  padding: 1.25rem 2rem;
+}
+
+.compression-stat span:last-child {
+  justify-content: end;
+  background-color: var(--green-700);
+  color: var(--off-white-500);
+}
+
+/* Article Step 02: Colour Usage */
+
+.colour-usage-section h2 {
+  max-width: 14ch;
+}
+
+.colour-usage-content img {
+  width: 100%;
+  display: block;
+  background-color: #efefef;
+}
+
+/* Article Step 03: Font Usage */
+
+.font-usage-visual {
+  position: relative;
+  min-height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.font-usage-aa {
+  position: absolute;
+  width: min(95%, 560px);
+  opacity: 1;
+}
+
+.font-usage-chart {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  display: block;
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.28);
+}
+
+/* Article Step 04: Green Hosting */
+
+.green-hosting-content img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* Article Step 05: Animation Usage */
+
+.animation-visual {
+  overflow: hidden;
+  border: 1px solid rgba(243, 236, 231, 0.28);
+  border-radius: 0.75rem;
+  background-color: var(--black-700);
+}
+
+.animation-visual-header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  gap: 3rem;
+  padding: 3rem;
+}
+
+.animation-visual-header h4 {
+  margin-bottom: 0.75rem;
+  color: var(--off-white-500);
+}
+
+.animation-visual-header p,
+.animation-control-panel > p {
+  color: var(--off-white-700);
+  font-size: var(--body-lg);
+}
+
+.animation-total {
+  padding-top: 0.4rem;
+  white-space: nowrap;
+}
+
+.animation-total span {
+  color: var(--green-500);
+  font-family: "Nunito", Helvetica, Arial, sans-serif;
+  font-size: var(--heading-3);
+  font-weight: 700;
+}
+
+.animation-stage {
+  min-height: 280px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: center;
+  justify-items: center;
+  gap: 2rem;
+  padding: 3rem;
+  background-color: var(--black-900);
+}
+
+.animation-shape--rotation {
+  width: 7rem;
+  height: 7rem;
+  border: 0.45rem solid rgba(168, 228, 160, 0.22);
+  border-top-color: var(--green-500);
+  border-radius: 999px;
+  animation: spin 1.4s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    rotate: 360deg;
+  }
+}
+
+.animation-shape--sliding {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 0.65rem;
+  background: linear-gradient(135deg, var(--green-900), var(--green-300));
+  animation: slide-y 2s ease-in-out infinite alternate;
+}
+
+@keyframes slide-y {
+  from {
+    transform: translateY(2rem);
+  }
+  to {
+    transform: translateY(-2rem);
+  }
+}
+
+.animation-shape--fade {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 999px;
+  background-color: var(--green-800);
+  animation: fade-loop 1.7s ease-in-out infinite alternate;
+}
+
+@keyframes fade-loop {
+  to {
+    opacity: 0.35;
+  }
+}
+
+.animation-shape--scale {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 0.65rem;
+  background: linear-gradient(135deg, var(--green-900), var(--green-300));
+  animation: scale-pulse 1.8s ease-in-out infinite alternate;
+}
+
+@keyframes scale-pulse {
+  to {
+    transform: scale(1.16);
+  }
+}
+
+.animation-control-panel {
+  display: grid;
+  gap: 2rem;
+  padding: 2.5rem 3rem;
+  background-color: var(--black-600);
+}
+
+.animation-controls {
+  display: grid;
+  gap: 1rem;
+}
+
+.animation-control {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1rem 1.25rem;
+  border-radius: 0.5rem;
+  background-color: var(--black-900);
+}
+
+.animation-control p {
+  color: var(--off-white-500);
+  font-size: var(--body-lg);
+}
+
+.animation-control p span {
+  margin-left: 1rem;
+  color: var(--off-white-700);
+  font-size: var(--body-md);
+}
+
+.animation-toggle {
+  width: 5rem;
+  height: 2.5rem;
+  padding: 0.25rem;
+  border-radius: 999px;
+  background-color: var(--black-400);
+}
+
+.animation-toggle span {
+  width: 2rem;
+  height: 2rem;
+  display: block;
+  border-radius: 999px;
+  background-color: var(--black-300);
+  transition: transform 180ms ease, background-color 180ms ease;
+}
+
+.animation-toggle[aria-pressed="true"] {
+  background-color: var(--green-400);
+}
+
+.animation-toggle[aria-pressed="true"] span {
+  background-color: var(--black-700);
+  transform: translateX(2.5rem);
+}
+
+.animation-visual-note {
+  padding: 0 3rem 2.5rem;
+  color: var(--green-500);
+  background-color: var(--black-600);
+  font-size: var(--body-lg);
+}
+
+/* Article Media Queries */
+
+@media (max-width: 900px) {
+  .quote h3 {
+    font-size: var(--heading-4);
+  }
+
+  .quote p {
+    font-size: var(--body-md);
+  }
+
+  .image-size-intro,
+  .colour-usage-content,
+  .font-usage-section,
+  .green-hosting-content,
+  .animation-usage-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .font-usage-visual {
+    justify-content: center;
+  }
+
+  .font-usage-chart {
+    width: 100%;
+  }
+
+  .image-format-weight {
+    display: none;
+  }
+}

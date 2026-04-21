@@ -1,0 +1,277 @@
+@font-face {
+  font-family: Nunito;
+  src: url("../src/assets/fonts/Nunito-Bold.ttf");
+}
+
+/* Design Tokens */
+
+:root {
+  --page-max-width: 1920px;
+  --page-padding: clamp(1.5rem, 7vw, 23.125rem);
+  --article-step-padding: 10rem 0;
+  --article-step-gap: 4rem;
+
+  --body-xl: 1.5rem;
+  --body-lg: 1rem;
+  --body-md: 0.875rem;
+  --body-sm: 0.75rem;
+
+  --heading-1: 5rem;
+  --heading-2: 3.5rem;
+  --heading-3: 2rem;
+  --heading-4: 1.5rem;
+
+  --black-50: #e7e7e7;
+  --black-100: #b5b6b5;
+  --black-200: #919292;
+  --black-300: #5f6060;
+  --black-400: #404141;
+  --black-500: #101211;
+  --black-600: #0f100f;
+  --black-700: #0b0d0c;
+  --black-800: #090a09;
+  --black-900: #070807;
+
+  --green-50: #f6fcf6;
+  --green-100: #e4f7e2;
+  --green-200: #d7f3d3;
+  --green-300: #c5edbf;
+  --green-400: #b9e9b3;
+  --green-500: #a8e4a0;
+  --green-600: #99cf92;
+  --green-700: #77a272;
+  --green-800: #5c7d58;
+  --green-900: #476043;
+
+  --off-white-50: #fefdfd;
+  --off-white-100: #fbf9f8;
+  --off-white-200: #f9f6f4;
+  --off-white-300: #f7f2ef;
+  --off-white-400: #f5f0ec;
+  --off-white-500: #f3ece7;
+  --off-white-600: #ddd7d2;
+  --off-white-700: #ada8a4;
+  --off-white-800: #86827f;
+  --off-white-900: #666361;
+}
+
+/* Base */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  background-color: var(--black-500);
+}
+
+#root {
+  width: 100%;
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Nunito", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1;
+}
+
+h1 {
+  font-size: var(--heading-1);
+}
+
+h2 {
+  font-size: var(--heading-2);
+}
+
+h3 {
+  font-size: var(--heading-3);
+}
+
+h4 {
+  font-size: var(--heading-4);
+}
+
+/* Utilities */
+
+.body-xl {
+  font-size: var(--body-xl);
+}
+
+.body-lg {
+  font-size: var(--body-lg);
+}
+
+.body-md {
+  font-size: var(--body-md);
+}
+
+.body-sm {
+  font-size: var(--body-sm);
+}
+
+.muted-text-white {
+  color: var(--off-white-700);
+}
+
+.muted-text-dark {
+  color: var(--black-300);
+}
+
+.insight-label {
+  color: var(--green-500);
+  font-size: var(--body-lg);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/* Buttons */
+
+button {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.button-accent {
+  background-color: var(--green-500);
+  color: var(--black-500);
+}
+
+.button-dark {
+  background-color: var(--black-500);
+  color: var(--off-white-500);
+}
+
+.button-white,
+.button-light {
+  background-color: var(--off-white-500);
+  color: var(--black-500);
+}
+
+.button-lg {
+  padding: 16px 32px;
+  font-size: var(--body-lg);
+  --button-icon-size: 1.5rem;
+}
+
+.button-md {
+  padding: 12px 24px;
+  font-size: var(--body-md);
+  --button-icon-size: 1.25rem;
+}
+
+.button-sm {
+  padding: 8px 16px;
+  font-size: var(--body-sm);
+  --button-icon-size: 1rem;
+}
+
+.left-icon,
+.right-icon {
+  display: inline-flex;
+  align-items: center;
+}
+
+.left-icon i,
+.right-icon i {
+  font-size: var(--button-icon-size, 1rem);
+  line-height: 1;
+}
+
+/* Header */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  width: 100%;
+  background-color: var(--black-800);
+}
+
+.header-content {
+  width: 100%;
+  max-width: var(--page-max-width);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem var(--page-padding);
+  margin: 0 auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: var(--off-white-500);
+  font-size: var(--body-lg);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--green-500);
+}
+
+/* Footer */
+
+footer {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  background-color: var(--black-800);
+}
+
+.footer-content {
+  width: 100%;
+  max-width: var(--page-max-width);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 4rem var(--page-padding);
+  margin: 0 auto;
+}
+
+footer p {
+  color: var(--off-white-500);
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-links a {
+  color: var(--off-white-900);
+}
+
+/* Media Queries */
+
+@media (max-width: 1440px) {
+  :root {
+    --page-padding: clamp(1.5rem, 6vw, 7rem);
+  }
+}

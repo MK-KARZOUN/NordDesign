@@ -1,0 +1,31 @@
+.not-found-page {
+  min-height: calc(100vh - 9rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  padding: 10rem var(--page-padding);
+}
+
+.not-found-kicker {
+  color: var(--green-500);
+  font-family: "Nunito", Helvetica, Arial, sans-serif;
+  font-size: clamp(4rem, 10vw, 9rem);
+  font-weight: 700;
+  line-height: 0.85;
+}
+
+.not-found-page h1 {
+  color: var(--off-white-500);
+}
+
+.not-found-page > p:not(.not-found-kicker) {
+  max-width: 44rem;
+}
+
+.not-found-actions {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
