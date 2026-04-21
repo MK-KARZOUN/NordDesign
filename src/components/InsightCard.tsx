@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import type { InsightCardModel } from "../models/InsightCardModel";
 
 type InsightCardProps = {
@@ -12,13 +13,13 @@ const InsightCard = ({ card }: InsightCardProps) => {
         <span className="insight-label">{card.label}</span>
         <h4>{card.title}</h4>
         <p className="body-lg muted-text-white">{card.description}</p>
-        <a
+        <Link
           className="insight-link"
-          href={card.link}
+          to={card.link}
           aria-label={`Read article: ${card.title}`}
         >
           Read article <span aria-hidden="true">→</span>
-        </a>
+        </Link>
       </div>
     </article>
   );

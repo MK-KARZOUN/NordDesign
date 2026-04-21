@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Button from "../components/UI/Button";
@@ -75,7 +76,7 @@ const Home = () => {
       <section className="services">
         <div className="section-header">
           <h2>Our Services</h2>
-          <a href="/services"> Explore all our services </a>
+          <Link to="/services"> Explore all our services </Link>
         </div>
 
         <div className="services-grid">
@@ -106,7 +107,7 @@ const Home = () => {
               experiences.
             </p>
           </div>
-          <a href="/insights">View all</a>
+          <Link to="/insights">View all</Link>
         </div>
 
         <div className="insights-grid">
