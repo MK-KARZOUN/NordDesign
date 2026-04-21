@@ -7,6 +7,7 @@ import InsightCard from "../components/InsightCard";
 import ServiceMainCard from "../components/ServiceMainCard";
 import ServiceStackCard from "../components/ServiceStackCard";
 import { approachCards, insightCards, services } from "../constants";
+import { assetPath } from "../utils/assetPath";
 import "../styles/Home.css";
 
 const Home = () => {
@@ -119,12 +120,12 @@ const Home = () => {
         <div className="cta-banner-content">
           <img
             className="star-1"
-            src="../../public/images/Star 1.svg"
+            src={assetPath("images/Star 1.svg")}
             alt="star"
           />
           <img
             className="star-2"
-            src="../../public/images/Star 1.svg"
+            src={assetPath("images/Star 1.svg")}
             alt="star"
           />
           <h2>Ready To Build Your Site</h2>

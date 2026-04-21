@@ -1,4 +1,5 @@
 import AnimationUsageVisual from "../AnimationUsageVisual";
+import { assetPath } from "../../utils/assetPath";
 const FiveEasyWaysToReduceDigitalImpactArticleBody = () => {
   return (
     <>
@@ -43,7 +44,7 @@ const FiveEasyWaysToReduceDigitalImpactArticleBody = () => {
 
           <img
             className="image-format-weight"
-            src="/images/Image format weight.svg"
+            src={assetPath("images/Image format weight.svg")}
             alt="Illustration comparing the file weight of PNG, JPEG, WebP, and AVIF image formats"
           />
         </div>
@@ -51,12 +52,12 @@ const FiveEasyWaysToReduceDigitalImpactArticleBody = () => {
         <div className="image-comparison">
           <img
             className="comparison-image comparison-image--compressed"
-            src="/images/dune-compressed.webp"
+            src={assetPath("images/dune-compressed.webp")}
             alt=""
           />
           <img
             className="comparison-image comparison-image--original"
-            src="/images/dune-original.jpg"
+            src={assetPath("images/dune-original.jpg")}
             alt=""
           />
           <span className="comparison-label comparison-label--left">
@@ -106,7 +107,7 @@ const FiveEasyWaysToReduceDigitalImpactArticleBody = () => {
             </p>
           </div>
           <img
-            src="/images/colour-power-usage-chart-oled-screens.svg"
+            src={assetPath("images/colour-power-usage-chart-oled-screens.svg")}
             alt="Chart showing current draw for black, red, green, blue, and white on OLED screens"
           />
         </div>
@@ -140,13 +141,13 @@ const FiveEasyWaysToReduceDigitalImpactArticleBody = () => {
         <div className="font-usage-visual">
           <img
             className="font-usage-aa"
-            src="/images/Aa.png"
+            src={assetPath("images/Aa.png")}
             alt=""
             aria-hidden="true"
           />
           <img
             className="font-usage-chart"
-            src="/images/font style size.png"
+            src={assetPath("images/font style size.png")}
             alt="Comparison of file size between custom fonts and system fonts"
           />
         </div>
@@ -180,7 +181,7 @@ const FiveEasyWaysToReduceDigitalImpactArticleBody = () => {
             </p>
           </div>
           <img
-            src="/images/Green hosting.webp"
+            src={assetPath("images/Green hosting.webp")}
             alt="Server rack with green lighting"
           />
         </div>

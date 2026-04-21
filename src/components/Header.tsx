@@ -1,11 +1,12 @@
 import { NavLink } from "react-router-dom";
+import { assetPath } from "../utils/assetPath";
 
 const Header = () => {
   return (
     <header>
       <div className="header-content">
         <NavLink to="/">
-          <img src="/images/Logo-1.svg" alt="logo" />
+          <img src={assetPath("images/Logo-1.svg")} alt="logo" />
         </NavLink>
         <ul className="nav-links">
           <li>

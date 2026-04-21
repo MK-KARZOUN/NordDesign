@@ -2,6 +2,7 @@ import type { AnimationControlModel } from "./models/AnimationControlModel";
 import type { ApproachCardModel } from "./models/ApproachCardModel";
 import type { InsightCardModel } from "./models/InsightCardModel";
 import type { ServiceModel } from "./models/ServiceModel";
+import { assetPath } from "./utils/assetPath";
 
 export const approachCards: ApproachCardModel[] = [
   {
@@ -113,7 +114,7 @@ export const services: ServiceModel[] = [
 
 export const insightCards: InsightCardModel[] = [
   {
-    img: "/images/website speed.webp",
+    img: assetPath("images/website speed.webp"),
     label: "PERFORMANCE",
     title: "Why website speed matters for user experience",
     description:
@@ -122,7 +123,7 @@ export const insightCards: InsightCardModel[] = [
     link: "/insights/why-website-speed-matters-for-user-experience",
   },
   {
-    img: "/images/Clean Design.webp",
+    img: assetPath("images/Clean Design.webp"),
     label: "DESIGN",
     title: "The value of minimalist web design",
     description:
@@ -131,7 +132,7 @@ export const insightCards: InsightCardModel[] = [
     link: "/insights/the-value-of-minimalist-web-design",
   },
   {
-    img: "/images/Laptop.webp",
+    img: assetPath("images/Laptop.webp"),
     label: "DIGITAL IMPACT",
     title: "5 easy ways to reduce the digital impact of your website",
     description:
